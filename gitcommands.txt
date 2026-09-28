@@ -1,0 +1,92 @@
+git --version
+git init 
+git add .
+git status
+
+## Lab 9 - ideation
+
+git config —global user.name ‘abhishek0014singh@gmail.com’
+git config —global user.name ‘Abhishek’
+
+
+git branch
+git branch <branch name> --> to create new branch
+
+git switch -c <branch name>
+git checkout <branch name>
+git checkout -b <branch name>
+
+git merge <other branch name> ( merge new branch into main/master)
+
+
+git branch -d daily-routine --> to delete the  branch
+
+git branch -m master main --> to rename the branch
+
+
+
+---------------------------
+Lab 10 commands 
+
+git diff
+git diff --staged
+
+
+
+git remote add github/origin https://github.com/abhishek/project.git     #Git, add a remote repository, call it origin, and its address is this GitHub URL.
+git remote set-url origin https://github.com/datascientistabhishek/demo.git
+
+git remote -v ----> see the remote repositories connected to your local Git repository.
+
+git branch -M main
+git push -u origin <local-machine-branch-name>
+#next time you can do only
+git push
+
+.gitignore --> .gitignore is a special file in your Git project that tells Git:
+
+“Do not track these files or folders.”
+
+
+git push -u origin main:development --> Take my local main branch and push it to the development branch on GitHub.
+
+git push -u origin development:main -->
+                       │           │
+                       │           └── GitHub branch
+                       └────────────── Local branch
+
+Pull Request
+--------------
+git clone https://github.com/company/AI-Project.git
+Create your feature branch
+make change in code.
+now commit the changes in same branch
+Push your branch to GitHub(git push -u origin feature/login-api)
+NOW we create the Pull Request( on Github -->Compare & pull request)
+
+
+
+
+git pull(git fetch + git merge) --> Bring the latest changes from GitHub to my local computer and merge also."
+
+
+git pull origin main --> Get the latest changes from the main branch of the remote called origin, and integrate them into my current local branch.
+git pull origin development --> Get the development branch from origin and integrate it into my current branch.
+
+ -->(git fetch + git merge) First bring the latest changes from GitHub, then put my changes on top of those latest changes."
+Local:   A → B
+GitHub:  A → C
+after git pull --rebase
+A → C → B
+
+
+git fetch --> only fetch latest change on github don't merge
+then git add and commit
+
+git log --oneline --all --graph --> to see visually changes
+
+git rebase
+
+git rebase origin/main --> "Take my current local main work and put it on top of the latest origin/main."
+
+git log --oneline --graph ---> Check your history
